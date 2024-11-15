@@ -4,8 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <h1>Café Paris</h1>
+        <p id="eslogan">Un momento de relax</p>
+        <ul>
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="carta.html">Nuestra carta</a></li>
+            <li><a href="contacto.html">Contacte con nosotros</a></li>
+        </ul>
+        <h2>Contacte con nosotros</h2>
+
+        <div class="formulario">
+            <form action="procesacontacto.php" method="get">
+                <p>
+                    <label for="nom">Nombre y Apellidos:</label>
+                    <input type="text" name="nombre" required
+                    placeholder="Escriba su nombre y apellidos"
+                    id="nom">
+                </p>
+                <p>
+                    <label for="fecha-nac">Fecha de Nacimiento:</label>
+                    <input type="date" name="fecha-nac" required
+                    id="fecha-nac">
+                </p>
+                <p> 
+                    <label>Suele consumir:</label>
+
+                    <label for="cafe">Café</label>
+                    <input type="radio" value="C"
+                    id="cafe" name="consumo">
+
+                    <label for="te">Té</label>
+                    <input type="radio" value="T"
+                    id="te" name="consumo">
+
+                    <label for="ambos">Ambos</label>
+                    <input type="radio" value="A"
+                    id="ambos" name="consumo">
+                
+                </p>
+                <p>
+                    <label for="cafesdia">Número de cafés al dia:</label>
+                    <input type="number" name="cafesdia"
+                    id="cafesdia" min="1" max="5">
+                </p>
+                <p>
+                    <label for="cafeteria">Seleccione su cafetería:</label>
+                    <select name="cafeteria" id="cafeteria">
+                        <option value="ma" selected>Madrid</option>
+                        <option value="ba">Barcelona</option>
+                        <option value="se">Sevilla</option>
+                    </select>
+                <p>
+                <p>
+                    <label for="info">
+                    <input type="checkbox" name="info" id="info" checked>
+                    Deseo recibir información sobre novedades y ofertas
+                    </label>
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Reiniciar ">        
+                </p>
+            </form>
+        </div>
     
 </body>
 </html>

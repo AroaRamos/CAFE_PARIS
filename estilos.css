@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Caveat:wght@400..700&family=Pacifico&family=Parisienne&family=Satisfy&display=swap');
+
+/* Estilos de "Página Principal" */
 body{
     padding-left: 20px;
     padding-right: 20px;
-    background-image: url(fondocafe.jpg);
+    background-image: url(images/taza-cafe-780x470.jpg);
     background-size: cover;
+    background-attachment: fixed;/*Fija la imagen de fondo, asi cuando hago scroll no se desplaza*/
+    background-repeat: no-repeat; /*Para que la imagen no se repita*/
 
 }
 
@@ -23,7 +27,8 @@ h1{
     color: Cornsilk;
     border: 2px solid Cornsilk;
     width: 40%;
-    margin: 0 auto; /* Centra el párrafo en la página */
+    margin: auto; /* Centra el párrafo en la página */
+    display: block;  /* Asegura que se comporte como un elemento de bloque */
 }
 
 h2{
@@ -31,21 +36,25 @@ h2{
     color: #ffe4c4;
 }
 
-ul li{
-    color: white;
+ul li {
+    color: white; /* Color blanco para los ítems */
+}
+
+ul li a {
+    font-family: 'Pacifico', cursive;
     font-size: 1.5em;
-    font-family: "Pacifico", cursive;
- }
+    text-decoration: none;
 
- a{text-decoration: none;}
+}
+/*¿Cuando damos propiedades en los enlaces dentro de una lista, hay que 
+darle a todo el conjutnto que engloba al enlace o solo al enlace en si?*/
+ul li a:hover {
+    font-weight: bold; 
+}
 
-a:link{ color: white;}
-
-a:hover{ font-weight: bold;}
-
-a:active{ color: darkgoldenrod;}
-
-#fondo{ background-size: cover;}
+ul li a:active {
+    color: DarkGoldenRod; 
+}
 
 .texto-normal{
     font-family: "Satisfy", cursive;
@@ -53,14 +62,68 @@ a:active{ color: darkgoldenrod;}
     color: #ffe4c4;
     text-align: justify;
     line-height: 2;
-    padding: 30%;
+    padding: 30px;
 }
-#taza{ 
+
+#logocafe{ 
     border-radius: 50%;
     width: 10%;
-
 }
 
-#contenedor-taza{
+#contenedor-logo{
     text-align: center;
 }
+
+/* Estilos página Carta */
+.fotocarta{
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Ajusta la imagen para que llene el espacio (200*200) sin deformarse */
+}
+
+.categoria{
+    background-color: darkgoldenrod;
+    font-size: 2em;
+    text-shadow: 3px 3px white;
+}
+
+table, td, th {
+    border: 3px solid darkgoldenrod;
+    border-collapse: collapse;
+    vertical-align: center;
+    width: 50%;
+    padding: 20px;
+    margin: auto;
+    
+}
+table{
+    background-color: cornsilk;
+    font-family: "Satisfy", cursive;
+    font-size: 1.5em;
+    text-align: center;
+    margin: auto;
+   
+}
+
+
+/* Estilos del formulario */
+form{
+    border: solid 2px darkgoldenrod;
+    border-radius: 20px;
+    width: 50%;
+    text-align: left;
+    padding: 30px;
+    background-color: black;
+    color: cornsilk;
+}
+
+label{
+    font-family: 'Caveat', cursive; 
+    color: cornsilk;
+    font-size: 1.5em;
+}
+
+.formulario {
+    width: 70%; 
+    margin: 0 auto; /* Centra el (div) que contiene el formulario */
+  }
