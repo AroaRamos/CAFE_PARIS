@@ -28,7 +28,7 @@ h1{
     border: 2px solid Cornsilk;
     width: 40%;
     margin: auto; /* Centra el párrafo en la página */
-    display: block;  /* Asegura que se comporte como un elemento de bloque */
+    
 }
 
 h2{
@@ -36,18 +36,22 @@ h2{
     color: #ffe4c4;
 }
 
-ul li {
-    color: white; /* Color blanco para los ítems */
-}
+
 
 ul li a {
     font-family: 'Pacifico', cursive;
     font-size: 1.5em;
     text-decoration: none;
+    color:white;
 
 }
-/*¿Cuando damos propiedades en los enlaces dentro de una lista, hay que 
-darle a todo el conjutnto que engloba al enlace o solo al enlace en si?*/
+
+a:link{
+    color:white;
+}
+li{
+    color: white;
+}
 ul li a:hover {
     font-weight: bold; 
 }
@@ -115,6 +119,7 @@ form{
     padding: 30px;
     background-color: black;
     color: cornsilk;
+    margin: auto;
 }
 
 label{
@@ -124,6 +129,5 @@ label{
 }
 
 .formulario {
-    width: 70%; 
-    margin: 0 auto; /* Centra el (div) que contiene el formulario */
+    text-align: center;
   }
